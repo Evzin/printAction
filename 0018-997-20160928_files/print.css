@@ -1,0 +1,46 @@
+@media print {
+	
+	button {
+		display: none !important;
+	}
+	
+	#npa-text {
+		height: 100%;
+		overflow-y: visible;
+	}
+	
+	a{
+		border:0;
+		text-decoration:none;
+	}
+	
+    a img{
+		border:0
+	}
+	
+    a:after {
+		content:" (" attr(href) ") ";
+		font-size: 90%;
+	}
+	
+    a[href^="/"]:after {
+		content: " (gisnpa-dnr.ru/" attr(href) ") ";
+	}
+	
+	* {
+		font-size: 14pt !important; 
+		line-height: 1.5 !important;
+		margin-bottom: 2.5px !important;
+		margin-top: 2.5px !important;
+		font-family: 'Times New Roman', serif !important;
+	}
+	
+	br {
+		page-break-before: right;
+	}
+	
+	.nextpage {
+		display:block;
+		page-break-before:always;
+	}
+}
