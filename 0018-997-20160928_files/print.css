@@ -1,9 +1,9 @@
+/*
+ * Стили текста при печати
+ */
+
 @media print {
-	
-	button {
-		display: none !important;
-	}
-	
+
 	#npa-text {
 		height: 100%;
 		overflow-y: visible;
@@ -34,13 +34,36 @@
 		margin-top: 2.5px !important;
 		font-family: 'Times New Roman', serif !important;
 	}
-	
-	br {
-		page-break-before: right;
-	}
-	
+
 	.nextpage {
 		display:block;
 		page-break-before:always;
 	}
+}
+
+/*
+ *Стили для кнопок созданых в окне для печати,
+ *кнопкам задана картинка для значения background
+ *т.к. прописанный текстом значение кнопок будут отображаться на печати
+ */
+
+#startPrint, #closeWin {
+	position: fixed;
+	margin: 10px;
+}
+
+#startPrint {
+	right: 120px;
+	width: 163px;
+	height: 46px;
+	background-image: url("startPrint.png");
+	background-repeat: no-repeat;
+}
+
+#closeWin {
+	right: 0;
+	width: 98px;
+	height: 46px;
+	background-image: url("closeWin.png");
+	background-repeat: no-repeat;
 }
